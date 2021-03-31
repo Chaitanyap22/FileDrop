@@ -1,0 +1,24 @@
+{
+    "name": "filedrop-server",
+    "version": "2.0.0",
+    "description": "Quickly share files with multiple users",
+    "private": true,
+    "scripts": {
+        "dev": "nodemon index",
+        "start": "sucrase-node index"
+    },
+    "author": "Chaitanya Pawar | HotCoder Pvt. Ltd.",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "project-name-generator": "^2.1.7",
+        "sucrase": "^3.15.0",
+        "ws": "^7.3.0"
+    },
+    "engines": {
+        "node": "10.x"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
