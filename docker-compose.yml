@@ -16,4 +16,4 @@ services:
     depends_on:
       - filedrop-server
     volumes:
-      - ./nginx/compose-nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/compose-nginx.conf:/usr/local/etc/nginx/nginx.conf

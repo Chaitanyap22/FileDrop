@@ -2,7 +2,7 @@ FROM node:12.18.4 AS base
 
 WORKDIR /app
 
-COPY ./filedrop/package*.json ./client/
+COPY ./filedrop/package*.json ./filedrop/
 
 WORKDIR /app/filedrop
 RUN npm install
@@ -29,7 +29,7 @@ RUN apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/main l
     && apk add  --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.9/main/ nodejs=10.19.0-r0 npm=10.19.0-r0
 
 COPY ./nginx/image-nginx.template /etc/nginx/nginx.template
-COPY --from=base /app/client/build /etc/nginx/html
+COPY --from=base /app/filedrop/build /etc/nginx/html
 
 WORKDIR /app
 
