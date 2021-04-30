@@ -43,7 +43,7 @@ const Home = () => (
         <img src={twoDevices} alt="Laptop and mobile connected together" loading="lazy" style="margin-right: -60px" />
         <h2>Easy to use</h2>
         <p>
-          FileDrop is a web app, just open it in your browser, join a block, and start sharing. No need to download specific apps for different platforms.
+          FileDrop is a web app, just open it in your browser, join a block, and start sharing. No need to download specific apps for different platforms or create account.
         </p>
       </div>
 

@@ -1,24 +1,23 @@
 export default {
 
     WS_HOST: (() => {
+        if (typeof window === 'undefined') return '';
         if (WS_HOST) return WS_HOST;
-        if (typeof window !== "underfined") {
-            if (window.location.protocol === 'https:') {
-                return `wss://${window.location.host}/ws`;
-            } else {
-                return `ws://${window.location.host}/ws`;
-            }
+
+        if (window.location.protocol === 'https:') {
+            return `wss://${window.location.host}/ws`;
+        } else {
+            return `ws://${window.location.host}/ws`;
         }
     })(),
     SERVER_HOST: (() => {
+        if (typeof window === 'undefined') return '';
         if (SERVER_HOST) return SERVER_HOST;
 
-        if (typeof window !== "undefined") {
-            if (window.location.protocol === 'https:') {
-                return `https://${window.location.host}/`;
-            } else {
-                return `http://${window.location.host}/`;
-            }
+        if (window.location.protocol === 'https:') {
+            return `https://${window.location.host}/server`;
+        } else {
+            return `http://${window.location.host}/server`;
         }
 
     })(),

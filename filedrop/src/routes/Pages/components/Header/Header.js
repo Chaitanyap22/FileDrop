@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import { useState } from 'preact/hooks';
 import { Menu, X, Github } from 'preact-feather';
+import { Link } from 'preact-router/match';
 
 import Pill from '../../../../components/Pill/Pill';
 import { useOnHistoryPush } from '../../../../hooks';
@@ -29,13 +30,14 @@ function Header() {
          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
       <nav style={{ display: isMenuOpen ? 'flex' : 'none' }}>
-        <a href="/how-it-works">How it works</a>
+        <Link activeClassName="active" href="/how-it-works">How it works</Link>
         <a href="https://hotcoder.in">
           Our Host
         </a>
         <a href="https://hotcoder.in/index.html#contact-info">
           Contact Us
         </a>
+        <a href="https://www.buymeacoffee.com/chaitanyap">Donate</a>
       </nav>
     </header>
   );
