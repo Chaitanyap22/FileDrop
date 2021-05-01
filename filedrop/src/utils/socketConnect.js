@@ -4,7 +4,7 @@ import FileShare from './fileShare';
 import urls from '../utils/urls';
 
 /**
- * Opens a socket connection to join a room
+ * Opens a socket connection to join a Block
  * @param {String} room Room to join
  * @param {String} username Name of the user joining the room
  */

@@ -53,7 +53,7 @@ class FileTransfer extends PureComponent {
     this.fileInput = createRef();
 
     /**
-     * Add the current room in recent rooms list
+     * Add the current block in recent blocks list
      */
     if (!savedData.rooms.includes(room)) {
       localStorage.setItem('filedrop', JSON.stringify({
@@ -463,7 +463,7 @@ class FileTransfer extends PureComponent {
 
             <div class={`transfer-help ${peers.length > 1 && isP2P && 'p2p'}`}>
               {
-                peers.length <= 1 ? 'Share room link to devices you want to share files with'
+                peers.length <= 1 ? 'Share block link to devices you want to share files with'
                   : isP2P ? (
                     <>
                       <Zap size={20} /> Established a P2P connection!

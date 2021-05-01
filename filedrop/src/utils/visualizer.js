@@ -179,7 +179,7 @@ class Visualizer {
         r: 0.2 * dis,
         angle,
         borderWidth: 2,
-        borderColor: '#3BE8B0',
+        borderColor: '#6265FF',
         ctx: this.ctx,
       });      
     }
@@ -206,11 +206,11 @@ class Visualizer {
     
     const primaryColor = ({ name, peerId }) => {
       if (this.sentTo.length && (this.nodes[0].name === name || this.nodes[0].peerId === peerId)) {
-        return '#3BE8B0';
+        return '#6265FF';
       }
 
       if (this.receivedBy.find(node => node.name === name || node.peerId === peerId)) {
-        return '#3BE8B0';
+        return '#6265FF';
       }
 
       return '#636979';

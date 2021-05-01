@@ -2,8 +2,8 @@ import { useState, useEffect } from 'preact/hooks';
 import urls from '../utils/urls';
 
 /**
- * Hook to fetch instant room from the server
- * @param {Function} cb Callback function called with instant room name passed as parameter
+ * Hook to fetch instant block from the server
+ * @param {Function} cb Callback function called with instant block name passed as parameter
  */
 function useInstantRoom(cb) {
   const [loading, setLoading] = useState(false);
